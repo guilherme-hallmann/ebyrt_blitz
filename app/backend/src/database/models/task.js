@@ -7,6 +7,9 @@ module.exports = (sequelize, DataTypes) => {
       status: { type: DataTypes.STRING, allowNull: false },
       userId: { type: DataTypes.INTEGER },
     },
+    {
+      timestamps: true,
+    },
   );
 
   Task.associate = ({ User }) => {
