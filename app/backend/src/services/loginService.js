@@ -10,12 +10,10 @@ const login = async ({ email, password }) => {
   if (!pwValidation) throw errorThrow(401, 'Invalid password!');
   const token = generateToken({ id: user.id, name: user.name, email: user.email });
   return {
-    user: {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      token,
-    },
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    token,
   };
 };
 
